@@ -62,6 +62,9 @@ public class TreeVo {
 
         list.add(TreeVo.builder().id(10).name("鸠江区").parent(4).build());
 
+        list.add(TreeVo.builder().id(11).name("蜀山经济开发区").parent(5).build());
+        list.add(TreeVo.builder().id(12).name("南岗镇").parent(5).build());
+
 
         return list;
     }

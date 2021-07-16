@@ -41,6 +41,7 @@ public class GetTreeController {
         try {
             
             List<TreeVo> list = TreeVo.allTreeVoList();
+            System.out.println("list = " + list);
             if (!CollectionUtils.isEmpty(list)) {
 
                 //1、将根节点放入临时List中
@@ -48,6 +49,7 @@ public class GetTreeController {
 
                 //2、将所有数据放入Treemap中,遍历所有节点
                 Map<Integer, TreeVo> treeVoMap = list.stream().collect(Collectors.toMap(TreeVo::getId, e -> e));
+                System.out.println("treeVoMap = " + treeVoMap);
                 for (Map.Entry<Integer, TreeVo> integerTreeVoEntry : treeVoMap.entrySet()) {
                     //2.1获取当前节点
                     TreeVo treeVo = integerTreeVoEntry.getValue();
